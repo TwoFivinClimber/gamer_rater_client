@@ -7,7 +7,7 @@ function GameCard({ obj }) {
   return (
     <Card>
       <Link href={`/games/${obj.id}`} passHref>
-        <Card.Title>{obj.title}</Card.Title>
+        <Card.Title className="game-card-links">{obj.title}</Card.Title>
       </Link>
     </Card>
   );

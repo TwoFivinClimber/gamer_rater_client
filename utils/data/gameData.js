@@ -16,4 +16,16 @@ const getSingleGame = (id) => new Promise((resolve, reject) => {
     .then(reject);
 });
 
-export { getAllGames, getSingleGame };
+const createGame = (obj) => new Promise((resolve, reject) => {
+  fetch(`${dbUrl}/games`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(obj),
+  }).then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
+});
+
+export { getAllGames, getSingleGame, createGame };

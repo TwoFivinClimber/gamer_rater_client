@@ -7,7 +7,7 @@ function GameDetail({ obj }) {
     <Card>
       <Card.Title>{obj.title}</Card.Title>
       <Card.Text>Creator: {obj.designer}</Card.Text>
-      <Card.Text>Released in {obj.yearReleased.split('-')[0]}</Card.Text>
+      <Card.Text>Released in {obj.yearReleased?.split('-')[0]}</Card.Text>
       <Card.Text>For up to {obj.numberOfPlayers} players</Card.Text>
       <Card.Text>Recommended Age: {obj.recAge}</Card.Text>
       <Card.Text>Approx {obj.playTime}min game time</Card.Text>
